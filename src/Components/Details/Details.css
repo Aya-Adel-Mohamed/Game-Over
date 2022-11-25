@@ -1,0 +1,60 @@
+.btncolor{
+    color: #aaa;
+    background-color: #32383e;
+    border-color: #32383e;
+    font-size: 20px;
+    margin-top: 10px;
+    padding: 9px 15px;
+   
+}
+.properties{
+    padding: 9px 15px;
+    font-size: 20px;
+    margin-top: 10px;
+}
+.btn-danger,.btn-danger:hover,.btn-danger:focus{
+    background-color: #4799eb!important;
+    border:2px solid #4799eb!important;
+}
+.title-fonts{
+    color: #a0a7ad;
+    font-size: 3.2rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+.secondary-color{
+    color: #a0a7ad;
+    font-size:1.6rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+.paragraph-fonts{
+    font-weight:400;
+    line-height:1.6;
+    font-size:1.25rem ;
+    color: #a0a7ad;
+}
+.paragraph-font{
+    font-weight:400;
+    line-height:1.6;
+    font-size:1.22rem ;
+    color: #a0a7ad;
+}
+.overwatch{
+    color: #a0a7ad;
+    font-size:1.7rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+.font-parg{
+    color: #a0a7ad;
+    font-size:1.2rem;
+    font-weight: 400;
+    line-height: 1.2;
+}
+.info{
+    color: #a0a7ad;
+    font-size:2.4rem;
+    font-weight: 500;
+    line-height: 1.2;
+}

@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Xanh+Mono:ital@1&display=swap");
+
+.navbar-brand{
+    font-family: Xanh Mono,monospace;
+    font-weight:500;
+}
+.navbar-brand img {
+    width: 86px;
+    filter: drop-shadow(1px 1px 3px #1983e6ce);
+}
+img{
+    vertical-align: middle;
+}
+.navbar{
+    background-color: #272b30!important;
+    border-bottom: 1px solid rgba(28,28,28,.6);
+    text-shadow: 1px 1px 1px rgb(0 0 0 / 30%);
+}
+.navbord:hover{
+border:1px solid #b4b2b299;
+border-radius: 5px;
+}
+.navbar-nav{
+    font-size: 19.5px;
+}
+.bordercolor{
+    color: #4799eb;
+    border:2px solid #4799eb;
+}
+
+.bordercolor:focus,.bordercolor:hover{
+    color: #4799eb;
+    border:2px solid #4799eb;
+}
+.dropdown-item{
+    padding-right:70px;
+    font-size: 19px;
+}
+@media screen and (max-width:992px){
+    .btn-inline{
+        display: inline-flex;
+    }
+}

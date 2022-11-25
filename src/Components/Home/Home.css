@@ -1,0 +1,39 @@
+.heading{
+    font-size: 3.15rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #aaa;
+}
+.color{
+    color:#49acff;
+}
+.lead{
+    font-size: 1.57rem;
+    font-weight: 300;
+}
+.btn-font{
+    font-size: 1.3rem;
+}
+.bg-header{
+    background-image: url('../../assets/paladins.b44d33d6e7ee1ba8.png');
+    background-repeat: no-repeat;
+    background-color: #1c1e22;
+    background-position: top;
+    background-size: contain;
+    border-radius: 0.3rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(0,0,0,.6);
+}
+@media screen and (max-width:1200px){
+    .bg-header{
+        background-size: cover;
+    }
+}
+.Recommendations{
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    font-size: 2.2rem;
+    color: #aaa;
+}
