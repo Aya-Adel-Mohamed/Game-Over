@@ -68,7 +68,7 @@ setIsLoading(false);
     <div className="container py-5 mt-2">
       <div className="row bg-color">
         <div className="col-lg-6 d-none d-lg-block img-bg"></div>
-        <div className="col-lg-6 py-5 px-5">
+        <div className="col-lg-6 py-5 px-0 px-lg-5">
           <div className="login-content text-center px-4 pt-1">
             <img src={image} width='135px' alt="" />
             <h1 className='login-h1 mb-4 mt-3'>Log in to GameOver</h1>

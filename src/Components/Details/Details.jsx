@@ -7,35 +7,35 @@ import '../Details/Details.css';
 import Loading from '../Loading/Loading';
 
 export default function Details() {
-  let Params = useParams();
-  
-  let[data,setData]=useState(null);
-  let[error,setError]=useState(null);
-  let [isLoading,setIsLoading]=useState(true);
-  async function getDataDetails(){
-    return await axios.get('https://free-to-play-games-database.p.rapidapi.com/api/game',{
-    params: Params,
-      headers: {
-        'X-RapidAPI-Key': 'b52128808dmsh5826403ec30ac21p1b9548jsnfca5769e0b68',
-        'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com'
-      }
-    })
-  }
-  useEffect(()=>{
-getDataDetails().then(res=>{
-  console.log(res.data)
-  setData(res.data)
-  setIsLoading(false);
-  setError(null);
-}).catch(err=>{
-  setIsLoading(false);
-  setError(err);
-})
+let Params = useParams();
+let[data,setData]=useState(null);
+let[error,setError]=useState(null);
+let [isLoading,setIsLoading]=useState(true);
 
-  },[])
+async function getDataDetails(){
+  return await axios.get('https://free-to-play-games-database.p.rapidapi.com/api/game',{
+  params: Params,
+  headers: {
+    'X-RapidAPI-Key': 'b52128808dmsh5826403ec30ac21p1b9548jsnfca5769e0b68',
+    'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com'
+    }
+  })
+}
+  
+useEffect(()=>{
+getDataDetails().then(res=>{
+console.log(res.data)
+setData(res.data)
+setIsLoading(false);
+setError(null);
+}).catch(err=>{
+setIsLoading(false);
+setError(err);
+})
+},[])
  
-  return (
-    <>
+return (
+  <>
   {isLoading && <Loading/>}
   {error && <div>Error</div>}
   {data?<><div className="container-fluid py-5 px-xl-5 px-0 ">

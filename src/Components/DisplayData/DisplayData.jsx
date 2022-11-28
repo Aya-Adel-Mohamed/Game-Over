@@ -27,8 +27,7 @@ export default function DisplayData({data}) {
          </div>
         </div>
     </Link>
-        
-        </div>
+  </div>
     </>
   )
 }
