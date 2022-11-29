@@ -29,7 +29,7 @@ export default function Register() {
       e.preventDefault();
       if(validateUser()){
         setIsLoading(true)
-  let {data} = await axios.post('https://route-egypt-api.herokuapp.com/signup',user);
+  let {data} = await axios.post('https://routeegypt.herokuapp.com/signup',user);
   console.log(data)
   if(data.message =="success"){
   navigate('/login')
