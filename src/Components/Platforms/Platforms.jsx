@@ -50,7 +50,7 @@ return (
     <div className="row">
     {data?.slice(0,paginate).map((all)=><DisplayData key={all.id} data={all}/>)}
     </div>
-    {data? <button onClick={load_more} className='btn btn-outline-secondary mx-auto d-flex py-2 px-3 fs-5 my-3'>More Games <i className="ms-2 fas fa-chevron-right pt-2"></i></button>:null}
+    {data? <button onClick={load_more} className='btn btn-outline-secondary mx-auto d-flex py-2 px-3 fs-6 my-3'>More Games <i className="ms-1 fas fa-chevron-right"></i></button>:null}
   </div>
   </div>
   </>}

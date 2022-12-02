@@ -8,9 +8,9 @@ import Loading from '../Loading/Loading';
 
 export default function Details() {
 let Params = useParams();
-let[data,setData]=useState(null);
-let[error,setError]=useState(null);
-let [isLoading,setIsLoading]=useState(true);
+let[ data , setData ]=useState(null);
+let[ error , setError ]=useState(null);
+let [ isLoading , setIsLoading ]=useState(true);
 
 async function getDataDetails(){
   return await axios.get('https://free-to-play-games-database.p.rapidapi.com/api/game',{
@@ -69,25 +69,25 @@ return (
         <Carousel controls={false} indicators={false}>
             {data?.screenshots?.map(screenshot=> <Carousel.Item key={screenshot.id}> <img src={screenshot?.image}className='d-block w-100'al=''/> </Carousel.Item>)}
         </Carousel>
-        <h2 className='mt-3 info mb-4'>Additional Information</h2>
+        <h5 className='mt-3 info mb-4'>Additional Information</h5>
         <div className="row gy-2">
           <div className="col-6 col-md-4">
-            <span className='text-muted fs-5'>Title</span><br/><p className='font-parg'>{data.title}</p>
+            <span className='text-muted fs-6'>Title</span><br/><p className='font-parg'>{data.title}</p>
           </div>
           <div className="col-6 col-md-4">
-            <span className='text-muted fs-5'>Developer</span><br/><p className='font-parg'>{data.developer}</p>
+            <span className='text-muted fs-6'>Developer</span><br/><p className='font-parg'>{data.developer}</p>
           </div>
           <div className="col-6 col-md-4">
-            <span className='text-muted fs-5'>Publisher</span><br/><p className='font-parg'>{data.publisher}</p>
+            <span className='text-muted fs-6'>Publisher</span><br/><p className='font-parg'>{data.publisher}</p>
           </div>
           <div className="col-6 col-md-4">
-            <span className='text-muted fs-5'>Release Date</span><br/><p className='font-parg'>{data.release_date}</p>
+            <span className='text-muted fs-6'>Release Date</span><br/><p className='font-parg'>{data.release_date}</p>
           </div>
           <div className="col-6 col-md-4">
-            <span className='text-muted fs-5'>Genre</span><br/><p className='font-parg'>{data.genre}</p>
+            <span className='text-muted fs-6'>Genre</span><br/><p className='font-parg'>{data.genre}</p>
           </div>
           <div className="col-6 col-md-4">
-            <span className='text-muted fs-5'>Platform</span><br/> <p className='font-parg'>{data.platform=="Windows"? <i className="fab fa-windows font-parg me-2"></i>: <i className="fas fa-window-maximize me-2"></i>}{data.platform}</p>
+            <span className='text-muted fs-6'>Platform</span><br/> <p className='font-parg'>{data.platform=="Windows"? <i className="fab fa-windows font-parg me-2"></i>: <i className="fas fa-window-maximize me-2"></i>}{data.platform}</p>
           </div>
         </div>
       </div>

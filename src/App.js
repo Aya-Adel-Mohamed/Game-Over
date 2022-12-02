@@ -40,7 +40,7 @@ function App() {
   
   const routers = createBrowserRouter([
     {path:'/',element: <MainLayout userData={userData} logOut={logOut}/>, children:[
-      {index:true ,element:<ProtectedRoute><Home /></ProtectedRoute>},
+      {path:'Game-Over',index:true ,element:<ProtectedRoute><Home /></ProtectedRoute>},
       {path:'register',element:<Register />},
       {path: 'login' ,element:<Login saveUser={saveUser}/>},
       {path:'all',element:<ProtectedRoute><All/></ProtectedRoute>},

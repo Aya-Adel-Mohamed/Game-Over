@@ -32,17 +32,17 @@ export default function NavBar(props) {
   ]
   return (
     <>
-    <nav className="navbar navbar-expand-lg navbar-dark p-3 shadow-sm fixed-top">
-  <div className="container-fluid mx-xl-4 mx-0">
-    <Link className="navbar-brand px-xl-5 px-0 me-5 fs-4" to=""><img src={logo} className='ms-xl-5 ms-0' alt=''/>Game Over</Link>
+    <nav className="navbar navbar-expand-lg navbar-dark p-2 shadow-sm fixed-top">
+  <div className="container">
+    <Link className="navbar-brand fs-5 me-5" to=""><img src={logo} alt=''/>Game Over</Link>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       {userData?<>
         <ul className="navbar-nav me-auto mb-2 mb-lg-0 ">
-        <li className="nav-item me-2">
-          <Link className="nav-link active" aria-current="page" to="">Home</Link>
+        <li className="nav-item me-2 ms-xl-5 ms-0">
+          <Link className="nav-link active" aria-current="page" to="/Game-Over">Home</Link>
         </li>
         <li className="nav-item me-2">
           <Link className="nav-link" to='all'>All</Link>
@@ -73,9 +73,9 @@ export default function NavBar(props) {
         </li>
       </ul>
       </>:""}
-      <ul className="navbar-nav mb-2 mb-lg-0 pe-5 ms-auto">
+      <ul className="navbar-nav mb-2 mb-lg-0 ms-auto">
       {userData?<>
-        <li className="nav-item pe-5">
+        <li className="nav-item">
         <span className="nav-link rounded-2 bordercolor px-3 py-2 btn-inline" onClick={logOut}>Log Out</span>
         </li>
       </>:<>
@@ -83,7 +83,7 @@ export default function NavBar(props) {
         <Link className="nav-link me-3 navbord btn-inline px-3 py-2 mb-2 mb-lg-0" to='login'>Login</Link>
         </li>
         <li className="nav-item">
-        <Link className="nav-link rounded-2 bordercolor me-5 px-3 py-2 btn-inline " to='register'>Join Free</Link>
+        <Link className="nav-link rounded-2 bordercolor  px-3 py-2 btn-inline " to='register'>Join Free</Link>
         </li>
       </>}
       </ul>

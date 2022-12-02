@@ -5,11 +5,11 @@ import DisplayData from '../DisplayData/DisplayData';
 import Loading from '../Loading/Loading';
 
 export default function Category() {
-let[data,setData]=useState(null);
-let[error,setError]=useState(null);
-let [isLoading,setIsLoading]=useState(true);
-let[params,setParams]=useState(null);
-const [paginate,setPaginate]=useState(20);
+let[ data , setData ]=useState(null);
+let[ error, setError ]=useState(null);
+let [ isLoading , setIsLoading ]=useState(true);
+let[ params , setParams ]=useState(null);
+const [ paginate , setPaginate ]=useState(20);
 let Params = useParams();
   
 async function getData(){
@@ -38,19 +38,19 @@ setError(err);
 },[Params]);
   
 const load_more= (e)=>{
-  setPaginate((prevValue)=>prevValue+20);
+  setPaginate(( prevValue )=>prevValue + 20 );
 }
 return (
   <>
-  {isLoading &&<Loading/>}
-  {error && <div>Error</div>}
-  {data && <>
+  { isLoading &&<Loading/> }
+  { error && <div>Error</div> }
+  { data && <>
   <div className="all mt-5 mx-5 pt-5">
     <div className="container px-0 pt-5">
       <div className="row">
-      {data?.slice(0,paginate).map((all)=><DisplayData key={all.id} data={all}/>)}
+      { data?.slice(0,paginate).map((all)=><DisplayData key={ all.id } data={ all }/>)}
       </div>
-      {data? <button onClick={load_more} className='btn btn-outline-secondary mx-auto d-flex py-2 px-3 fs-5 my-3'>More Games <i className="ms-2 fas fa-chevron-right pt-2"></i></button>:null}
+      { data? <button onClick={ load_more } className='btn btn-outline-secondary mx-auto d-flex py-2 px-3 fs-6 my-3'>More Games <i className="ms-1 fas fa-chevron-right "></i></button>:null}
     </div>
     </div>
   </>}

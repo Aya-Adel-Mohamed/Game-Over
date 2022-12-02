@@ -25,7 +25,7 @@
   },
   "scripts": {
     "predeploy":"npm run build",
-    "deploy":"gh-pages -d build",
+    "deploy":"gh-pages -d build -r https://github.com/Aya-Adel-Mohamed/Game-Over",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

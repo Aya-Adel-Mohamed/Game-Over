@@ -2,10 +2,10 @@
 
 .navbar-brand{
     font-family: Xanh Mono,monospace;
-    font-weight:500;
+    font-weight:400;
 }
 .navbar-brand img {
-    width: 86px;
+    width: 78px;
     filter: drop-shadow(1px 1px 3px #1983e6ce);
 }
 img{
@@ -21,20 +21,19 @@ border:1px solid #b4b2b299;
 border-radius: 5px;
 }
 .navbar-nav{
-    font-size: 19.5px;
+    font-size: 16px;
 }
 .bordercolor{
     color: #4799eb;
-    border:2px solid #4799eb;
+    border:1px solid #4799eb;
 }
-
 .bordercolor:focus,.bordercolor:hover{
     color: #4799eb;
-    border:2px solid #4799eb;
+    border:1px solid #4799eb;
 }
 .dropdown-item{
     padding-right:70px;
-    font-size: 19px;
+    font-size: 15px;
 }
 @media screen and (max-width:992px){
     .btn-inline{

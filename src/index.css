@@ -5,22 +5,27 @@ body{
 }
 .bg-badge{
   background-color: #4799eb;
-  font-size:15px;
-  padding: 9px;
+  font-size:13px;
+  font-weight:600;
+  padding: 8px;
 }
 .title-card,.p-card{
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+.fa-chevron-right{
+  font-size:14px;
+  padding-top: 7px;
+}
 .p-card{
-  padding-right: 32.5px;
-  font-size: 20.5px;
+  padding-right: 28px;
+  font-size: 15px;
   font-weight: 400;
 }
 .title-font{
   color: #adb5bd;
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   font-weight: 500;
   line-height: 1.2;
 }
@@ -31,15 +36,15 @@ body{
   background-color: #32383e;
 }
 .body-card{
-  margin-bottom: 26px;
+  margin-bottom: 20px;
   border-bottom-right-radius: 7px;
   border-bottom-left-radius: 7px;
 }
 .fa-window-maximize,.fa-windows,.fa-plus-square{
-  font-size: 20px;
+  font-size: 15px;
 }
 .font{
-  font-size: 15px;
+  font-size: 12px;
   padding: 2.6px 11px;
   
 }
@@ -48,4 +53,9 @@ body{
 }
 .scale:hover{
   transform: scale(1.04);
+}
+@media screen and (max-width:756px){
+  .container{
+    width:100%!important;
+  }
 }

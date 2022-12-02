@@ -84,32 +84,32 @@ export default function Register() {
         <div className="col-lg-6 d-none d-lg-block img-bg"></div>
         <div className="col-lg-6 py-5 px-4">
           <div className="Register-content text-center">
-            <h1 className='Register-h1 mb-4 mt-2 pb-2'>Create My Account!</h1>
+            <h1 className='Register-h1 mb-4 pb-2'>Create My Account!</h1>
             {apiError && <div className='alert alert-warning'>{apiError}</div>}
             <form onSubmit={(e)=>register(e)}>
             <div className="form-group row">
               <div className="col-md-6">
-              <input type="text" onChange={(e)=>getUserData(e) }id="first_name" className='form-control dark text-white' name="first_name" placeholder='First Name' />
-              <p className={validationError.filter(ele => ele.context.label =="first_name")[0]?"mt-1 alert alert-warning py-0 text-start fs-5":null}>{validationError.filter(ele => ele.context.label =="first_name")[0]?.message}</p>
+              <input type="text" onChange={(e)=>getUserData(e) }id="first_name" className='form-control dark text-white p-2' name="first_name" placeholder='First Name' />
+              <p className={validationError.filter(ele => ele.context.label =="first_name")[0]?"mt-1 alert alert-warning py-0 text-start fs-6":null}>{validationError.filter(ele => ele.context.label =="first_name")[0]?.message}</p>
               </div>
               <div className="col-md-6">
-              <input type="text" onChange={(e)=>getUserData(e) }id="last_name" className="form-control dark text-white"name="last_name" placeholder='Last Name' />
-              <p className={validationError.filter(ele => ele.context.label =="last_name")[0]?"mt-1 alert alert-warning py-0 text-start fs-5":null}>{validationError.filter(ele => ele.context.label =="last_name")[0]?.message}</p>
+              <input type="text" onChange={(e)=>getUserData(e) }id="last_name" className="form-control dark text-white p-2"name="last_name" placeholder='Last Name' />
+              <p className={validationError.filter(ele => ele.context.label =="last_name")[0]?"mt-1 alert alert-warning py-0 text-start fs-6":null}>{validationError.filter(ele => ele.context.label =="last_name")[0]?.message}</p>
               </div>
             </div>
             <div className="form-group ">
-              <input type="email"onChange={(e)=>getUserData(e) }id="email" className="form-control dark text-white"name="email" placeholder='Email Address'/>
-              <p className={validationError.filter(ele => ele.context.label =="email")[0]?"mt-1 alert alert-warning py-0 text-start fs-5":null}>{validationError.filter(ele => ele.context.label =="email")[0]?.message}</p>
+              <input type="email"onChange={(e)=>getUserData(e) }id="email" className="form-control dark text-white p-2"name="email" placeholder='Email Address'/>
+              <p className={validationError.filter(ele => ele.context.label =="email")[0]?"mt-1 alert alert-warning py-0 text-start fs-6":null}>{validationError.filter(ele => ele.context.label =="email")[0]?.message}</p>
             </div>
             <div className="form-group ">
-              <input type="number"  onChange={(e)=>getUserData(e) } id="age" className="form-control dark text-white" name="age" placeholder='age' />
-              <p className={validationError.filter(ele => ele.context.label =="age")[0]?"mt-1 alert alert-warning py-0 text-start fs-5":null}>{validationError.filter(ele => ele.context.label =="age")[0]?.message}</p>
+              <input type="number"  onChange={(e)=>getUserData(e) } id="age" className="form-control dark text-white p-2" name="age" placeholder='age' />
+              <p className={validationError.filter(ele => ele.context.label =="age")[0]?"mt-1 alert alert-warning py-0 text-start fs-6":null}>{validationError.filter(ele => ele.context.label =="age")[0]?.message}</p>
             </div>
             <div className="form-group ">
-              <input type="password"  onChange={(e)=>getUserData(e) } id="password" className="form-control dark text-white" name="password" placeholder='password' />
-              <p className={validationError.filter(ele => ele.context.label =="password")[0]?"mt-1 alert alert-warning py-0 text-start fs-5":null}>{validationError.filter(ele => ele.context.label =="password")[0]?.message}</p>
+              <input type="password"  onChange={(e)=>getUserData(e) } id="password" className="form-control dark text-white p-2" name="password" placeholder='password' />
+              <p className={validationError.filter(ele => ele.context.label =="password")[0]?"mt-1 alert alert-warning py-0 text-start fs-6":null}>{validationError.filter(ele => ele.context.label =="password")[0]?.message}</p>
             </div>
-            <button className='btn w-100 btn-primary'>
+            <button className='btn w-100 btn-primary fs-6'>
             {isLoading?<i className='fa fa-spinner fa-spin'></i>:"Create Account"}
             </button>
             </form>
@@ -117,7 +117,7 @@ export default function Register() {
             <div className="text-muted paragraph">This site is protected by reCAPTCHA and the Google 
             <a  href="https://policies.google.com/privacy" target={'_blank'} rel="noreferrer" className="text-secondary">Privacy Policy</a> and <a href="https://policies.google.com/terms" target={'_blank'} rel="noreferrer" className="text-secondary">Terms of Service</a> apply.</div>
             </div><hr/>
-            <div className="text-center mb-2 pt-2"><span class=" text-white-50 fs-6">Already a member?</span><Link  to="/login" className="text-decoration-none maincolor ms-2">
+            <div className="text-center mb-2 pt-2"><span class="text-white-50">Already a member?</span><Link  to="/login" className="text-decoration-none maincolor ms-2">
             Log In 
             <i className="fas fa-chevron-right"></i></Link></div>
           </div>

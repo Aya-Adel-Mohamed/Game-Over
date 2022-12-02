@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 export default function DisplayData({data}) {
   return (
     <>
-    <div className="col-xl-3 col-lg-4 col-md-6">
+    <div className="col-xl-3 col-lg-4 col-md-6 px-0 px-md-2 ">
     <Link to={'/gameDetails/'+ data.id} className='text-decoration-none'>
     <div className="shadow scale">
         <div className="image-card">
