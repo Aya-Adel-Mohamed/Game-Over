@@ -32,7 +32,7 @@ export default function Register() {
   let {data} = await axios.post('https://route-egypt-api.herokuapp.com/signup',user);
   console.log(data)
   if(data.message =="success"){
-  navigate('/login')
+  navigate('/Game-Over')
   setIsLoading(false);
   setApiError(null)
   }else{
@@ -117,7 +117,7 @@ export default function Register() {
             <div className="text-muted paragraph">This site is protected by reCAPTCHA and the Google 
             <a  href="https://policies.google.com/privacy" target={'_blank'} rel="noreferrer" className="text-secondary">Privacy Policy</a> and <a href="https://policies.google.com/terms" target={'_blank'} rel="noreferrer" className="text-secondary">Terms of Service</a> apply.</div>
             </div><hr/>
-            <div className="text-center mb-2 pt-2"><span class="text-white-50">Already a member?</span><Link  to="/login" className="text-decoration-none maincolor ms-2">
+            <div className="text-center mb-2 pt-2"><span class="text-white-50">Already a member?</span><Link  to="/Game-Over" className="text-decoration-none maincolor ms-2">
             Log In 
             <i className="fas fa-chevron-right"></i></Link></div>
           </div>

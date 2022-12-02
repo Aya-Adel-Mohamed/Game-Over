@@ -29,20 +29,20 @@ function App() {
     if(localStorage.getItem('token')){
       return props.children
     }else{
-      return <Navigate to='/login'/>
+      return <Navigate to='/Game-Over'/>
     }
   }
   function logOut(){
     localStorage.removeItem('token');
     setUserData(null);
-    return <Navigate to='/login'/>
+    return <Navigate to='/Game-Over'/>
   }
   
   const routers = createBrowserRouter([
     {path:'/',element: <MainLayout userData={userData} logOut={logOut}/>, children:[
-      {path:'Game-Over',index:true ,element:<ProtectedRoute><Home /></ProtectedRoute>},
+      {index:true ,element:<ProtectedRoute><Home /></ProtectedRoute>},
       {path:'register',element:<Register />},
-      {path: 'login' ,element:<Login saveUser={saveUser}/>},
+      {path: 'Game-Over' ,element:<Login saveUser={saveUser}/>},
       {path:'all',element:<ProtectedRoute><All/></ProtectedRoute>},
       {path:'platforms/:platform',element:<ProtectedRoute><Platforms/></ProtectedRoute>},
       {path:'sort-by/:sort',element:<ProtectedRoute><Sort/></ProtectedRoute>},

@@ -33,7 +33,7 @@ console.log(data)
 if(data.message =="success"){
   localStorage.setItem("token",data.token);
   saveUser();
-navigate('/Game-Over')
+navigate('/')
 setIsLoading(false);
 setApiError(null)
 }else{

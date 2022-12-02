@@ -42,7 +42,7 @@ export default function NavBar(props) {
       {userData?<>
         <ul className="navbar-nav me-auto mb-2 mb-lg-0 ">
         <li className="nav-item me-2 ms-xl-5 ms-0">
-          <Link className="nav-link active" aria-current="page" to="/Game-Over">Home</Link>
+          <Link className="nav-link active" aria-current="page" to="/">Home</Link>
         </li>
         <li className="nav-item me-2">
           <Link className="nav-link" to='all'>All</Link>
@@ -80,7 +80,7 @@ export default function NavBar(props) {
         </li>
       </>:<>
       <li className="nav-item">
-        <Link className="nav-link me-3 navbord btn-inline px-3 py-2 mb-2 mb-lg-0" to='login'>Login</Link>
+        <Link className="nav-link me-3 navbord btn-inline px-3 py-2 mb-2 mb-lg-0" to='Game-Over'>Login</Link>
         </li>
         <li className="nav-item">
         <Link className="nav-link rounded-2 bordercolor  px-3 py-2 btn-inline " to='register'>Join Free</Link>
