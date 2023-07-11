@@ -7,61 +7,67 @@ import { useNavigate } from 'react-router-dom';
 import '../Login/Login.css';
 
 export default function Login({saveUser}) {
-let [user,setUser] = useState({
-  email:"",
-  password:"",
+  let [user, setUser] = useState({
+    email: "",
+    password: ""
 })
-let[validationError,setValidationError]=useState([]);
-let[apiError,setApiError]=useState(null);
-let[isLoading,setIsLoading]=useState(false);
+let [validationError, setValidationError] = useState([]);
+let [apiError, setApiError] = useState(null);
+let [isLoading, setIsLoading] = useState(false);
 let navigate = useNavigate();
 
-  function getUserData(e){
-    let currentUser = {...user};
+
+function getUserData(e) {
+    let currentUser = { ...user };
     currentUser[e.target.name] = e.target.value;
-    setUser(currentUser);
-  }
-  useEffect(()=>{
-    console.log(user);
-  },[user])
-  async function loginUser(e){
-    e.preventDefault();
-  if(validateUser()){
-      setIsLoading(true)
-let {data} = await axios.post('https://route-movies-api.vercel.app/signin',user);
-console.log(data)
-if(data.message =="success"){
-  localStorage.setItem("token",data.token);
-  saveUser();
-navigate('/')
-setIsLoading(false);
-setApiError(null)
-}else{
-setApiError(data.message);
-setIsLoading(false);
+    setUser(currentUser)
 }
+
+useEffect(() => {
+
+}, [user]);
+
+async function loginUser(e) {
+    e.preventDefault();
+
+    if (validateUser()) {
+        setIsLoading(true);
+        let { data } = await axios.post('https://ecommerce.routemisr.com/api/v1/auth/signin', user);
+       console.log(data)
+        if(data.message == "success"){
+            localStorage.setItem('token',data.token)
+            saveUser();
+            navigate('/');
+            
+            setIsLoading(false);
+            setApiError(null);
+        }else{
+            setApiError(data.message);
+            setIsLoading(false);
+        }
     }
-  
-  }
-  function validateUser(){
+}
+
+function validateUser() {
     let schema = Joi.object({
-      email:Joi.string().email({minDomainSegments:2,tlds:{allow:false}}).messages({
-        "string.empty":"Email doesn't exist",
-      }),
-      password:Joi.string().pattern(new RegExp(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/)).messages({
-        "string.empty":"Incorrect password",
-        "string.pattern.base":"Invalid Password",
-      }),
+        email: Joi.string().email({ minDomainSegments: 2, tlds: { allow: false } }).messages({
+            "string.empty":"email is required"
+        }),
+        password: Joi.string().pattern(new RegExp(/^[A-Za-z0-9]{3,8}$/)).messages({
+            "string.empty":"password is required",
+            "string.pattern.base": "password must contain more than 3 characters or numbers "
+        })
     });
-    let validations = schema.validate(user,{abortEarly: false})
-    console.log(validations)
-    if(validations.error){
-      setValidationError(validations.error.details);
-      return false
-    }else{
-      return true
+
+    let validations = schema.validate(user, { abortEarly: false });
+
+    if (validations.error) {
+        setValidationError(validations.error.details);
+        return false
+    } else {
+        return true
     }
-  }
+}
   return (
     <>
     <section className='my-5 pb-3 pt-3'>
